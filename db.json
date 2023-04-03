@@ -1,0 +1,28 @@
+{
+  "favorites": [
+    {
+      "id": 1,
+      "title": "The Shawshank Redemption",
+      "genre": "Drama",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "title": "The Godfather",
+      "genre": "Crime",
+      "rating": 5
+    },
+    {
+      "title": "Shrek",
+      "genre": "Comedy",
+      "rating": 2,
+      "id": 3
+    },
+    {
+      "title": "Shrek 2",
+      "genre": "Comedy",
+      "rating": 2,
+      "id": 4
+    }
+  ]
+}

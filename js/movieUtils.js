@@ -1,3 +1,4 @@
+// Gets our movie list from our local library
 export const getFavorites = async () => {
     try {
         let url = `http://localhost:3000/favorites`;
@@ -8,12 +9,40 @@ export const getFavorites = async () => {
         }
         let response = await fetch(url, options);
         let data = await response.json();
+        console.log(data)
         return data;
     } catch(error){
         console.log(error);
     }
 }
+// Creates our movie card with our existing database
+export const movieCard = async () => {
+    try {
+        let data = await getMovies();
+        data.forEach((movie) => {
+            let element = document.createElement("div");
+            element.innerHTML = `
 
+        <div class="row cardRow">
+            <div class="column cardColumn">
+                <h1>Movie : ${movie.title}</h1>
+                <p>Genre: ${movie.genre}</p>
+                <p>Rating: ${movie.rating}</p>
+                <div class="row buttonRow">
+                    <button class="deleteButton">delete</button>
+                    <button class="editButton">edit</button>
+                </div>
+            </div>
+           
+      `;
+            document.querySelector("#movie-daddy").appendChild(element);
+        });
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+// Gets a single movie by the id number
 export const getFavorite = async (id) => {
     try {
         let url = `http://localhost:3000/favorites/${id}`;

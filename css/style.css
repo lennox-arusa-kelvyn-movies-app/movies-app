@@ -1,0 +1,37 @@
+* {
+    background-color: #11112a;
+    color: white;
+}
+
+.cardContainer {
+    margin: 20px 15px;
+}
+
+.cardRow {
+
+}
+
+.cardColumn {
+    border: 5px solid white;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 30vw;
+    width: 100%;
+}
+
+h1 {
+    font-size: 23px;
+}
+
+.editButton {
+    width: 100px;
+}
+
+.deleteButton {
+    width: 100px;
+}
+
+.buttonRow {
+    display: flex;
+    justify-content: center;
+}

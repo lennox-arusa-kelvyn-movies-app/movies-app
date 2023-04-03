@@ -5,14 +5,12 @@
     <title>Restful API Lecture</title>
     <link rel="stylesheet" href="css/resets.css">
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="page-wrapper">
-    <div class="container">
-        <!-- hopefully shows favs-->
-        <div class="column justify-center grow" id="favorites"></div>
-    </div>
-
+<!--    Where the movie card populates -->
+    <div class="container cardContainer" id="movie-daddy"></div>
     <div class="container grow justify-center">
         <div class="row justify-center">
             <div class="column shrink">
@@ -26,7 +24,7 @@
                     <option value="Horror">Horror</option>
                 </select>
                 <input id="rating" type="number" min="0" max="5">
-                <button>Add Movie!!!</button>
+                <button id="add-Movie">Add Movie!!!</button>
             </div>
         </div>
     </div>

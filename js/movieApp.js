@@ -1,8 +1,9 @@
 import * as movieUtils from './movieUtils.js'
 
 (async()=>{
-
-    document.querySelector('button').addEventListener('click', async function(){
+    await movieUtils.getFavorites()
+    await movieUtils.movieCard()
+    document.querySelector('#add-Movie').addEventListener('click', async function(){
 
         const title = document.querySelector('#title').value;
         const genre = document.querySelector('#genre').value;

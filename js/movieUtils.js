@@ -18,7 +18,7 @@ export const getFavorites = async () => {
 // Creates our movie card with our existing database
 export const movieCard = async () => {
     try {
-        let data = await getMovies();
+        let data = await getFavorites();
         data.forEach((movie) => {
             let element = document.createElement("div");
             element.innerHTML = `
@@ -140,3 +140,4 @@ export const deleteFavorite = async (id) => {
         console.log(error);
     }
 }
+

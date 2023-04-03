@@ -23,6 +23,18 @@
       "genre": "Comedy",
       "rating": 2,
       "id": 4
+    },
+    {
+      "title": "fsdfsdfds",
+      "genre": "Drama",
+      "rating": 3,
+      "id": 5
+    },
+    {
+      "title": "deadpool",
+      "genre": "Comedy",
+      "rating": 5,
+      "id": 6
     }
   ]
 }

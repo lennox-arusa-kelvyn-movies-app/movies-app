@@ -3,6 +3,7 @@ import * as movieUtils from './movieUtils.js'
 (async()=>{
 
     document.querySelector('button').addEventListener('click', async function(){
+
         const title = document.querySelector('#title').value;
         const genre = document.querySelector('#genre').value;
         const rating = parseFloat(document.querySelector('#rating').value);

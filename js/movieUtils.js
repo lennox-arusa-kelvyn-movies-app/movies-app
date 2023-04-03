@@ -1,8 +1,6 @@
-import{movieApi} from "./keys.js";
-
 export const getFavorites = async () => {
     try {
-        let url = `https://www.omdbapi.com/?apikey=${movieApi}&`;
+        let url = `http://localhost:3000/favorites`;
         let options = {
             headers: {
                 'Content-Type': 'application/json'

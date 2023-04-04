@@ -12,10 +12,10 @@
 <div class="page-wrapper">
     <div id="loader" class="center"></div>
 <!--    Where the movie card populates -->
-    <div class="container cardContainer" id="movie-daddy"></div>
-    <div class="container grow justify-center">
-        <div class="row justify-center">
-            <div class="column shrink">
+<!--    <div class="container cardContainer" id="movie-daddy"></div>-->
+    <div class="container full-width">
+        <div class="row full-width align-center">
+            <div class="column" id="formCol">
                 <input id="title" type="text" placeholder="Title"/>
                 <select id="genre">
                     <option value="Crime">Crime</option>
@@ -28,6 +28,15 @@
                 <input id="rating" type="number" min="0" max="5">
                 <button id="add-Movie">Add Movie!!!</button>
             </div>
+            <div class="column align-center">
+                <h1>LAK Movies</h1>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row  full-width flex-wrap" id="movie-daddy">
+
         </div>
     </div>
 </div>

@@ -23,9 +23,9 @@ export const movieCard = async () => {
             let element = document.createElement("div");
             element.innerHTML = `
 
-        <div class="row cardRow">
+        
             <div class="column cardColumn">
-                <h1>Movie : ${movie.title}</h1>
+                <h3>Movie : ${movie.title}</h3>
                 <p>Genre: ${movie.genre}</p>
                 <p>Rating: ${movie.rating}</p>
                 <div class="row buttonRow">

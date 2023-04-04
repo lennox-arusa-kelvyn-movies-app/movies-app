@@ -1,3 +1,4 @@
+import {movieApi} from "./keys.js";
 // Gets our movie list from our local library
 export const getFavorites = async () => {
     try {
@@ -15,17 +16,31 @@ export const getFavorites = async () => {
         console.log(error);
     }
 }
+
+// Creates our movie card with our existing database
+const API_KEY = 'movieApi';
+
+const getMoviePoster = async (movie) => {
+    const response = await fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=${movieApi}&query=${movie.title}`
+    );
+    const data = await response.json();
+    const posterPath = data.results[0].poster_path;
+    return `https://image.tmdb.org/t/p/w500${posterPath}`;
+};
+
+
 // Creates our movie card with our existing database
 export const movieCard = async () => {
     try {
-        let data = await getFavorites();
-        data.forEach((movie) => {
-            let element = document.createElement("div");
-            element.innerHTML = `
-
-        
+        const data = await getFavorites();
+        for (const movie of data) {
+            const element = document.createElement('div');
+            const posterUrl = await getMoviePoster(movie);
+            element.innerHTML  = `
             <div class="column cardColumn">
                 <h3>Movie : ${movie.title}</h3>
+                <img src="${posterUrl}" alt="${movie.title} poster">
                 <p>Genre: ${movie.genre}</p>
                 <p>Rating: ${movie.rating}</p>
                 <div class="row buttonRow">
@@ -45,7 +60,7 @@ export const movieCard = async () => {
                 patchFavorite(movie.id,movie)
             })
             document.querySelector("#movie-daddy").appendChild(element);
-        });
+        };
     } catch (error) {
         console.log(error);
     }

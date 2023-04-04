@@ -5,11 +5,16 @@ import * as movieUtils from './movieUtils.js'
 
     document.onreadystatechange = function() {
         if (document.readyState !== "complete") {
-            document.querySelector("body").style.visibility = "hidden";
+            // Add the "loading" class to the body element to apply the blur filter
+            document.querySelector("body").classList.add("loading");
             document.querySelector("#loader").style.visibility = "visible";
         } else {
-            document.querySelector("#loader").style.display = "none";
-            document.querySelector("body").style.visibility = "visible";
+            // Delay the execution of this code by 5 seconds (5000 milliseconds)
+            setTimeout(function() {
+                document.querySelector("#loader").style.display = "none";
+                document.querySelector("body").classList.remove("loading");
+                document.querySelector("#content-container").style.display = "block";
+            }, 3000);
         }
     };
 

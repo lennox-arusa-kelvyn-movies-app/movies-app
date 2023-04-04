@@ -2,6 +2,7 @@ import * as movieUtils from './movieUtils.js'
 
 
 (async()=>{
+
     document.onreadystatechange = function() {
         if (document.readyState !== "complete") {
             document.querySelector("body").style.visibility = "hidden";
@@ -11,9 +12,11 @@ import * as movieUtils from './movieUtils.js'
             document.querySelector("body").style.visibility = "visible";
         }
     };
+
     await movieUtils.getFavorites()
     await movieUtils.movieCard()
     document.querySelector('#add-Movie').addEventListener('click', async function(){
+
 
         const title = document.querySelector('#title').value;
         const genre = document.querySelector('#genre').value;
@@ -26,15 +29,6 @@ import * as movieUtils from './movieUtils.js'
         let result = await movieUtils.setFavorite(movieData);
         console.log(result);
     });
-    // document.onreadystatechange = function() {
-    //     if (document.readyState !== "complete") {
-    //         document.querySelector("body").style.visibility = "hidden";
-    //         document.querySelector("#loader").style.visibility = "visible";
-    //     } else {
-    //         document.querySelector("#loader").style.display = "none";
-    //         document.querySelector("body").style.visibility = "visible";
-    //     }
-    // };
 
     // // let body = {
     // //     "rating": 3

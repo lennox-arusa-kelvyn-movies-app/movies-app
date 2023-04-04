@@ -35,6 +35,15 @@ export const movieCard = async () => {
             </div>
            
       `;
+            let deleteButton = element.querySelector('.deleteButton');
+            deleteButton.addEventListener('click', function(){
+               deleteFavorite(movie.id);
+               element.remove();
+            });
+            let editButton = element.querySelector('.editButton');
+            editButton.addEventListener('click',function (){
+                patchFavorite(movie.id,movie)
+            })
             document.querySelector("#movie-daddy").appendChild(element);
         });
     } catch (error) {
@@ -58,6 +67,7 @@ export const getFavorite = async (id) => {
         console.log(error);
     }
 }
+
 
 export const searchFavorite = async (movie) => {
     let favorites = await getFavorites();
@@ -101,6 +111,16 @@ export const setFavorite = async (movie) => {
 }
 
 export const patchFavorite = async (id, movie) => {
+
+    let title = prompt('Enter the new title for the movie:');
+    let rating = prompt('Enter the new rating for the movie:');
+    let genre = prompt('Enter the new genre for the movie:');
+
+    // update the movie object with the new information
+    movie.title = title;
+    movie.rating = rating;
+    movie.genre = genre;
+
     try {
         if (!id) {
             throw new Error('You must provide an id');
@@ -113,13 +133,18 @@ export const patchFavorite = async (id, movie) => {
             },
             body: JSON.stringify(movie)
         }
+
         let response = await fetch(url, options);
         let data = await response.json();
+
+
+        console.log(data)
         return data;
     } catch(error){
         console.log(error);
     }
 }
+
 
 export const deleteFavorite = async (id) => {
     try {

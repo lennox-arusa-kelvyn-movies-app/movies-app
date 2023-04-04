@@ -1,6 +1,6 @@
 * {
-    background-color: #11112a;
-    color: white;
+    background-color: #15182f;
+    color: #7EC8E3;
 }
 
 #formCol{
@@ -9,9 +9,11 @@
 
 
 .cardColumn {
-    border: 3px solid white;
+    background-color: #121854;
+    border: 3px solid #7EC8E3;
     border-radius: 15px;
     text-align: center;
+
     /*min-width: 25vw;*/
     /*width: 100%;*/
     /*min-height: 10vw;*/
@@ -20,6 +22,44 @@
 img {
     max-height: 40vh;
     min-width: 16vw;
+}
+
+#logo {
+    max-height: 100px;
+}
+
+button {
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    background-color: #7EC8E3;
+    color: #15182f;
+}
+
+#genre {
+    background-color: #3e476c;
+    border-radius: 15px;
+}
+#rating {
+    background-color: #3e476c;
+    border-radius: 15px;
+}
+#title {
+    background-color: #3e476c;
+    border-radius: 15px;
+}
+#title::placeholder {
+    opacity: 0.5;
+}
+
+p {
+    background-color: #121854;
+}
+
+h3 {
+    background-color: #121854;
 }
 
 .editButton {
@@ -31,6 +71,7 @@ img {
 }
 
 .buttonRow {
+    background-color: #121854;
     display: flex;
     justify-content: center;
 }

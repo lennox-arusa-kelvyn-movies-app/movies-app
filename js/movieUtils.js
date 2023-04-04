@@ -39,7 +39,7 @@ export const movieCard = async () => {
             const posterUrl = await getMoviePoster(movie);
             element.innerHTML  = `
             <div class="column cardColumn">
-                <h3>Movie : ${movie.title}</h3>
+                <h3>${movie.title}</h3>
                 <img src="${posterUrl}" alt="${movie.title} poster">
                 <p>Genre: ${movie.genre}</p>
                 <p>Rating: ${movie.rating}</p>

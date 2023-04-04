@@ -3,24 +3,19 @@
     color: white;
 }
 
-.cardContainer {
-    margin: 20px 15px;
+#formCol{
+    max-width: 250px;
 }
 
-.cardRow {
-
-}
 
 .cardColumn {
-    border: 5px solid white;
+    border: 3px solid white;
     border-radius: 15px;
     text-align: center;
-    max-width: 30vw;
-    width: 100%;
-}
-
-h1 {
-    font-size: 23px;
+    /*min-width: 25vw;*/
+    /*width: 100%;*/
+    /*min-height: 10vw;*/
+    /*height: 100%;*/
 }
 
 .editButton {

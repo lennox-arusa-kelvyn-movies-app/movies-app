@@ -29,6 +29,12 @@
       "genre": "Comedy, Action",
       "rating": "5",
       "id": 6
+    },
+    {
+      "title": "Free Guy",
+      "genre": "Comedy",
+      "rating": 5,
+      "id": 7
     }
   ]
 }

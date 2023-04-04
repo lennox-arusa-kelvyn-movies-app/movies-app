@@ -15,23 +15,17 @@
     {
       "title": "Shrek",
       "genre": "Comedy",
-      "rating": 2,
+      "rating": 5,
       "id": 3
     },
     {
       "title": "Shrek 2",
       "genre": "Comedy",
-      "rating": 2,
+      "rating": 5,
       "id": 4
     },
     {
-      "title": "fsdfsdfds",
-      "genre": "Drama",
-      "rating": 3,
-      "id": 5
-    },
-    {
-      "title": "deadpool",
+      "title": "Deadpool",
       "genre": "Comedy",
       "rating": 5,
       "id": 6

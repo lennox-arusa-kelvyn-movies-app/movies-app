@@ -10,33 +10,38 @@
 <body>
 
 <div class="page-wrapper">
-    <div id="loader" class="center"></div>
+    <div id="loader">
+        <div class="loader"></div>
+    </div>
+
+    <div id="content-container">
 <!--    Where the movie card populates -->
 <!--    <div class="container cardContainer" id="movie-daddy"></div>-->
-    <div class="container full-width">
-        <div class="row full-width align-center">
-            <div class="column" id="formCol">
-                <input id="title" type="text" placeholder="Title"/>
-                <select id="genre">
-                    <option value="Crime">Crime</option>
-                    <option value="Drama">Drama</option>
-                    <option value="Comedy">Comedy</option>
-                    <option value="Fantasy">Fantasy</option>
-                    <option value="SciFi">SciFi</option>
-                    <option value="Horror">Horror</option>
-                </select>
-                <input id="rating" type="number" min="0" max="5">
-                <button id="add-Movie">Add Movie!!!</button>
-            </div>
-            <div class="column align-center">
-                <h1>LAK Movies</h1>
+        <div class="container full-width">
+            <div class="row full-width align-center">
+                <div class="column" id="formCol">
+                    <input id="title" type="text" placeholder="Title"/>
+                    <select id="genre">
+                        <option value="Crime">Crime</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="SciFi">SciFi</option>
+                        <option value="Horror">Horror</option>
+                    </select>
+                    <input id="rating" type="number" min="0" max="5">
+                    <button id="add-Movie">Add Movie!!!</button>
+                </div>
+                <div class="column align-center">
+                    <h1>LAK Movies</h1>
+                </div>
             </div>
         </div>
-    </div>
-    <br>
-    <div class="container">
-        <div class="row  full-width flex-wrap" id="movie-daddy">
+        <br>
+        <div class="container">
+            <div class="row  full-width flex-wrap" id="movie-daddy">
 
+            </div>
         </div>
     </div>
 </div>
